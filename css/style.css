@@ -92,8 +92,8 @@ a.start:hover {
 .nav-links {
   display: flex;
   padding-right: 10px;
-
   justify-content: flex-end;
+
   width: 30%;
 }
 .nav-links li {
@@ -220,6 +220,7 @@ a.start:hover {
 @media screen and (max-width: 1024px) {
   .nav-links {
     width: 60%;
+    justify-content: space-around;
   }
   .logo {
     width: 60%;
