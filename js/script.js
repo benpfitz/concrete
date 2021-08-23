@@ -1,0 +1,76 @@
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-links li");
+  //Toggle Nav
+
+  burger.addEventListener("click", () => {
+    //Toggle Nav
+    nav.classList.toggle("nav-active");
+    //Animate Links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.3
+        }s`;
+      }
+    });
+    //Burger Animation
+    burger.classList.toggle("toggle");
+  });
+};
+
+navSlide();
+
+window.onload = function () {
+  var slider1 = new Slider({
+    images: ".slider-1 img",
+    btnPrev: ".slider-1 .buttons .prev",
+    btnNext: ".slider-1 .buttons .next",
+    auto: false,
+  });
+};
+
+class Slider {
+  constructor(obj) {
+    this.images = document.querySelectorAll(obj.images);
+    this.auto = obj.auto;
+    this.btnPrev = obj.btnPrev;
+    this.btnNext = obj.btnNext;
+    this.rate = obj.rate || 1000;
+
+    var i = 0;
+    var slider = this;
+
+    this.prev = function () {
+      slider.images[i].classList.remove("shown");
+      i--;
+
+      if (i < 0) {
+        i = slider.images.length - 1;
+      }
+
+      slider.images[i].classList.add("shown");
+    };
+
+    this.next = function () {
+      slider.images[i].classList.remove("shown");
+      i++;
+
+      if (i >= slider.images.length) {
+        i = 0;
+      }
+
+      slider.images[i].classList.add("shown");
+    };
+
+    document.querySelector(slider.btnPrev).onclick = slider.prev;
+    document.querySelector(slider.btnNext).onclick = slider.next;
+
+    if (slider.auto) {
+      setInterval(slider.next, slider.rate);
+    }
+  }
+}
