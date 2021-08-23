@@ -196,7 +196,7 @@ a.start:hover {
   color: #fff;
   font-size: 100px;
   position: absolute;
-  top: 35%;
+  top: 60%;
   cursor: pointer;
 }
 
@@ -224,5 +224,9 @@ a.start:hover {
   }
   .contactform {
     padding-top: 50px;
+  }
+  .prev:before,
+  .next:before {
+    top: 25%;
   }
 }
