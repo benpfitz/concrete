@@ -1,3 +1,6 @@
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7,6 +10,7 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 body {
   background-color: rgb(224, 224, 224);
@@ -118,7 +122,6 @@ a.start:hover {
   body {
     overflow-x: hidden;
   }
-
   .nav-links {
     position: absolute;
     right: 0px;
@@ -227,6 +230,6 @@ a.start:hover {
   }
   .prev:before,
   .next:before {
-    top: 25%;
+    top: 15%;
   }
 }

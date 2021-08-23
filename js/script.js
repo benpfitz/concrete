@@ -32,7 +32,7 @@ window.onload = function () {
     auto: false,
   });
 };
-
+//image carosouel
 class Slider {
   constructor(obj) {
     this.images = document.querySelectorAll(obj.images);
