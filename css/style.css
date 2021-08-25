@@ -224,6 +224,9 @@ a.start:hover {
   }
   .logo {
     width: 60%;
+    letter-spacing: 4px;
+    font-size: 30px;
+    text-align: left;
   }
   .slider {
     width: 84%;
@@ -239,7 +242,7 @@ a.start:hover {
     width: 80%;
     position: relative;
     margin: 0 auto;
-    padding-top: 106px;
+    padding-top: 100px;
   }
   .slider .photos {
     position: relative;
