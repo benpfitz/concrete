@@ -1,16 +1,21 @@
+/* Set Reusable variables to make it easier to style something in the future. */
+:root {
+  --header-height: 8vh;
+  --bg-color: rgb(224, 224, 224);
+}
+
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   color: black;
-  margin: 0px;
-  padding: 0px;
+  margin: var(--header-height) 0 0 0;
+  padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: rgb(224, 224, 224);
+  background-color: var(--bg-color);
   text-align: center;
-  margin: 0 auto;
 }
 
 .content-area {
@@ -57,7 +62,7 @@ a.start:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: var(--header-height);
   background-color: #1d2228;
   position: fixed;
   top: 0;
@@ -75,6 +80,7 @@ a.start:hover {
 .nav a:active {
   border-bottom: 3px solid #fb8122;
 }
+
 .logo {
   color: rgb(224, 224, 224);
   text-transform: uppercase;
